@@ -1,13 +1,11 @@
 import React from 'react';
+// pages
+import { Home } from './pages';
 // global css
 import './styles/global.css';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Projeto Via CEP</h1>
-    </div>
-  );
+function App(): JSX.Element {
+  return <Home />;
 }
 
 export default App;
