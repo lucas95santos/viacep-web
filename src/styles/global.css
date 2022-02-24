@@ -2,9 +2,10 @@
 
 :root {
   --text-color: #777777;
+  --dark-text-color: #444444;
   --primary-color: #1565c0;
   --white-color: #ffffff;
-  --error-color: #c62828;
+  --error-color: #b71c1c;
 }
 
 input {
