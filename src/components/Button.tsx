@@ -11,11 +11,10 @@ function Button(props: ButtonProps): JSX.Element {
   const { text, type, loading, ...rest } = props;
 
   return (
-    <button type={type} {...rest}>
-      {loading ? (
-        <ReactLoading type="spin" color="#ffffff" height={20} width={20} />
-      ) : (
-        text
+    <button type={type} disabled={loading} {...rest}>
+      {text}
+      {loading && (
+        <ReactLoading type="spin" color="#ffffff" height={18} width={18} />
       )}
     </button>
   );
