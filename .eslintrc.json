@@ -21,11 +21,15 @@
   "plugins": ["react", "@typescript-eslint", "prettier"],
   "rules": {
     "prettier/prettier": "error",
-    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
+    "react/jsx-filename-extension": [
+      "warn",
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ],
     "import/no-unresolved": "off",
     "import/extensions": "off",
     "import/prefer-default-export": "off",
     "react/jsx-props-no-spreading": "off",
-    "react/button-has-type": "off"
+    "react/button-has-type": "off",
+    "no-use-before-define": "off"
   }
 }
