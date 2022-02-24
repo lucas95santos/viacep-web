@@ -22,7 +22,7 @@ interface AddressError {
 }
 
 interface AddressDetailProps {
-  data: Address;
+  data: Address | null;
   error: AddressError | null;
   loading: boolean;
 }
@@ -41,76 +41,80 @@ function AddressDetail(props: AddressDetailProps): JSX.Element {
               <p>{error.message}</p>
             </div>
           ) : (
-            <div className="detail">
-              <div className="detail__row">
-                <div className="detail__info">
-                  <p>
-                    <span>CEP:</span>
-                    {data.cep}
-                  </p>
+            <>
+              {data && (
+                <div className="detail">
+                  <div className="detail__row">
+                    <div className="detail__info">
+                      <p>
+                        <span>CEP:</span>
+                        {data?.cep}
+                      </p>
+                    </div>
+                    <div className="detail__info">
+                      <p>
+                        <span>Logradouro:</span>
+                        {data?.logradouro}
+                      </p>
+                    </div>
+                    <div className="detail__info">
+                      <p>
+                        <span>Complemento:</span>
+                        {data?.complemento === ''
+                          ? 'Não informado'
+                          : data?.complemento}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="detail__row">
+                    <div className="detail__info">
+                      <p>
+                        <span>Bairro:</span>
+                        {data?.bairro}
+                      </p>
+                    </div>
+                    <div className="detail__info">
+                      <p>
+                        <span>Localidade:</span>
+                        {data?.localidade}
+                      </p>
+                    </div>
+                    <div className="detail__info">
+                      <p>
+                        <span>UF:</span>
+                        {data?.uf}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="detail__row">
+                    <div className="detail__info">
+                      <p>
+                        <span>IBGE:</span>
+                        {data?.ibge === '' ? 'Não informado' : data?.ibge}
+                      </p>
+                    </div>
+                    <div className="detail__info">
+                      <p>
+                        <span>GIA:</span>
+                        {data?.gia === '' ? 'Não informado' : data?.gia}
+                      </p>
+                    </div>
+                    <div className="detail__info">
+                      <p>
+                        <span>DDD:</span>
+                        {data?.ddd}
+                      </p>
+                    </div>
+                    <div className="detail__info">
+                      <p>
+                        <span>Siafi:</span>
+                        {data?.siafi === '' ? 'Não informado' : data?.siafi}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div className="detail__info">
-                  <p>
-                    <span>Logradouro:</span>
-                    {data.logradouro}
-                  </p>
-                </div>
-                <div className="detail__info">
-                  <p>
-                    <span>Complemento:</span>
-                    {data.complemento === ''
-                      ? 'Não informado'
-                      : data.complemento}
-                  </p>
-                </div>
-              </div>
-              <div className="detail__row">
-                <div className="detail__info">
-                  <p>
-                    <span>Bairro:</span>
-                    {data.bairro}
-                  </p>
-                </div>
-                <div className="detail__info">
-                  <p>
-                    <span>Localidade:</span>
-                    {data.localidade}
-                  </p>
-                </div>
-                <div className="detail__info">
-                  <p>
-                    <span>UF:</span>
-                    {data.uf}
-                  </p>
-                </div>
-              </div>
-              <div className="detail__row">
-                <div className="detail__info">
-                  <p>
-                    <span>IBGE:</span>
-                    {data.ibge === '' ? 'Não informado' : data.ibge}
-                  </p>
-                </div>
-                <div className="detail__info">
-                  <p>
-                    <span>GIA:</span>
-                    {data.gia === '' ? 'Não informado' : data.gia}
-                  </p>
-                </div>
-                <div className="detail__info">
-                  <p>
-                    <span>DDD:</span>
-                    {data.ddd}
-                  </p>
-                </div>
-                <div className="detail__info">
-                  <p>
-                    <span>Siafi:</span>
-                    {data.siafi === '' ? 'Não informado' : data.siafi}
-                  </p>
-                </div>
-              </div>
-            </div>
+              )}
+            </>
           )}
         </>
       )}
