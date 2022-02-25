@@ -52,7 +52,7 @@
 
 <p>As seguintes ferramentas foram usadas no desenvolvimento do projeto:</p>
 
-- [NodeJS](https://pt-br.reactjs.org/)
+- [ReactJS](https://pt-br.reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Axios](https://axios-http.com/docs/intro)
 
