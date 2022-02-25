@@ -54,3 +54,17 @@
   color: var(--error-color);
   font-weight: 500;
 }
+
+@media screen and (max-width: 972px) {
+  .detail {
+    margin-bottom: 60px;
+  }
+  .detail__row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .detail__info {
+    height: auto;
+  }
+}
