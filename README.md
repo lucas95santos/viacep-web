@@ -68,7 +68,7 @@
 
 **2.** Instalar as depedências do projeto com o **npm** (comando `npm install`) ou com **yarn** (comando `yarn`)
 
-**3.** Subir o servidor backend. Será necessário realizar a configuração da API REST presente no repositório **https://github.com/lucas95santos/viacep-api** caso ainda não tenha feito.
+**3.** Subir o servidor backend. Será necessário realizar a configuração da API REST presente no repositório **https://github.com/lucas95santos/viacep-api** antes de subir essa aplicação.
 
 **4.** Execute o comando `yarn start` ou `npm start` para subir a aplicação.
 
